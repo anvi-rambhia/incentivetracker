@@ -1,0 +1,95 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #eef2f7;
+  margin: 0;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(90deg,#0f172a,#1e293b);
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* CONTAINER */
+.container {
+  padding: 20px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* KPI BOX */
+.stats {
+  display: flex;
+  gap: 15px;
+}
+
+.stat-box {
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+.stat1 { background:#2563eb; }
+.stat2 { background:#16a34a; }
+.stat3 { background:#dc2626; }
+
+/* INPUT */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* BUTTON */
+button {
+  background: #2563eb;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+button:hover { background:#1e40af; }
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #0f172a;
+  color: white;
+  padding: 10px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* STATUS */
+.yes { color: green; font-weight: bold; }
+.no { color: red; font-weight: bold; }
+
+/* TOP */
+.top {
+  background: gold;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+}

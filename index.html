@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Promoter Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="display:none;">
+
+<!-- 🔐 LOGIN -->
+<div id="loginSection" class="card" style="display:none;">
+  <h2>🔐 Login</h2>
+
+  <input id="email" type="email" placeholder="Enter Email">
+  <input id="password" type="password" placeholder="Enter Password">
+
+  <button onclick="login()">Login</button>
+  <button onclick="register()">Register</button>
+</div>
+
+<!-- 🧠 MAIN APP -->
+<div id="appSection" style="display:none;">
+
+  <div class="header">
+    Promoter Tracker
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div class="container">
+
+    <!-- FORM -->
+    <div id="formSection" class="card">
+      <h3>Add Entry</h3>
+
+      <label>Date</label>
+      <input type="date" id="entryDate">
+
+      <label>Mobile Sold</label>
+      <select id="sale" onchange="toggleMobile()">
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <div id="mobileSection" style="display:none;">
+        <label>Brand</label>
+        <select id="brand">
+          <option value="">Select Brand</option>
+          <option>Apple</option>
+          <option>Samsung</option>
+          <option>Vivo</option>
+          <option>Oppo</option>
+          <option>Motorola</option>
+          <option>Realme</option>
+          <option>Xiaomi</option>
+          <option>Market Phone</option>
+          <option>Other Brand</option>
+        </select>
+
+        <label>Value</label>
+        <input id="value" type="number">
+      </div>
+
+      <label>Accessory Sold</label>
+      <select id="accSale" onchange="toggleAccessory()">
+        <option value="">Select</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <div id="accessorySection" style="display:none;">
+        <label>Accessory</label>
+        <select id="accName">
+          <option value="">Select</option>
+          <option>Earphones</option>
+          <option>Charger</option>
+          <option>Power Bank</option>
+          <option>Back Cover</option>
+          <option>Screen Guard</option>
+        </select>
+
+        <label>Value</label>
+        <input id="accValue" type="number">
+      </div>
+
+      <label>Google Review</label>
+      <select id="review"><option>Select</option><option>Yes</option><option>No</option></select>
+
+      <label>Photo</label>
+      <select id="photo"><option>Select</option><option>Yes</option><option>No</option></select>
+
+      <label>Instagram</label>
+      <select id="instagram"><option>Select</option><option>Yes</option><option>No</option></select>
+
+      <label>Contact</label>
+      <select id="contact"><option>Select</option><option>Yes</option><option>No</option></select>
+
+      <button onclick="addSale()">Submit</button>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboardSection" class="card">
+
+      <h3>Monthly Summary</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Promoter</th>
+                <th>Total Qty</th>
+                <th>Eligible</th>
+                <th>Total Incentive</th>
+              </tr>
+            </thead>
+            <tbody id="summaryTableBody"></tbody>
+          </table>
+        </div>
+
+        <div >
+          <table>
+            <thead>
+              <tr>
+                <th>Promoter</th>
+                <th>Date</th>
+                <th>Qty</th>
+                <th>Value</th>
+                <th>Acc Value</th>
+                <th>Review</th>
+                <th>Photo</th>
+                <th>Instagram</th>
+                <th>Contact</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
